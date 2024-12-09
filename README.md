@@ -55,7 +55,7 @@ class Fetcher:
         print(f"{avg}")
         print(f"-------{len(r)}")
     
-    def get_students(self,r,s):
+    def __get_students(self,r,s):
         r:list = requests.get(url).json()
         r = filter(lambda r: r['name']+r['last_name'],r)
         r=list(r)
